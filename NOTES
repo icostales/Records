@@ -1,0 +1,54 @@
+PROJECT NAME:
+Beneficiary Records Management System (PWA)
+
+PROJECT PURPOSE:
+A mobile-first Progressive Web Application for government office personnel to search and view beneficiary records.
+
+SYSTEM TYPE:
+View-Only Information System
+
+USERS:
+
+* Approximately 25 authorized users
+* Mobile phone users
+* Android
+* iPhone
+* Tablet
+
+DATA SOURCE:
+Google Sheets (Master Data)
+
+DATABASE:
+Supabase PostgreSQL
+
+AUTHENTICATION:
+Supabase Auth (Email + Password)
+
+SYNC:
+Google Sheets → Google Apps Script → Supabase
+
+CURRENT STATUS:
+Google Sheets sync is working.
+Supabase contains 872 beneficiary records.
+Authentication is working.
+Dashboard is working.
+Records page is working.
+Details page is working.
+
+CURRENT FOLDER STRUCTURE:
+
+beneficiary-app/
+
+assets/
+├── icon-192.png
+├── icon-512.png
+
+css/
+└── style.css
+
+js/
+├── supabase.js
+├── auth.js
+├── dashboard.js
+├── records.js
+└

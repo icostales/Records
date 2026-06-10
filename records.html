@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>NTA Project Records</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <header class="top-header">
+
+        <div class="header-content">
+
+            <h2>
+                NTA Project Records
+            </h2>
+
+            <button
+                id="logoutBtn"
+                class="logout-btn"
+            >
+                Logout
+            </button>
+
+        </div>
+
+    </header>
+
+    <!-- Search & Filters -->
+
+    <div class="search-container">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search beneficiary, address, project..."
+        >
+
+        <select id="projectFilter">
+            <option value="">
+                All Projects
+            </option>
+        </select>
+
+        <select id="yearFilter">
+            <option value="">
+                All Years
+            </option>
+        </select>
+
+    </div>
+
+    <!-- Stats -->
+
+    <div class="records-stats">
+
+        <p>
+            Total Records:
+            <strong id="recordCount">
+                0
+            </strong>
+        </p>
+
+    </div>
+
+    <!-- Records -->
+
+    <div id="recordsContainer">
+
+    </div>
+
+    <!-- Scripts -->
+
+    <script src="js/supabase.js"></script>
+    <script src="js/records.js"></script>
+
+    <script>
+
+        document
+            .getElementById("logoutBtn")
+            .addEventListener(
+                "click",
+                async () => {
+
+                    await supabaseClient
+                        .auth
+                        .signOut();
+
+                    window.location =
+                        "login.html";
+
+                }
+            );
+
+    </script>
+
+</body>
+
+</html>
